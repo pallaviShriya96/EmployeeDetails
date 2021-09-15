@@ -1,0 +1,70 @@
+<div class="employee-form">
+  <form [formGroup]="employeeForm" autocomplete="off">
+    <!-- Name Field -->
+    <mat-form-field class="name-input-field" >
+      <mat-label>Name: </mat-label>
+      <input matInput  formControlName="name">
+    </mat-form-field>
+    <small class="invalid-message invalid-text" *ngIf="employeeForm.controls.name.errors?.pattern"><b>Invalid Name</b></small>
+    <!-- Email Id-->
+    <mat-form-field class="name-input-field" >
+      <mat-label>Email: </mat-label>
+      <input matInput  formControlName="email">
+    </mat-form-field>
+    <small class="invalid-message invalid-text" *ngIf="employeeForm.controls.email.errors?.pattern"><b>Invalid EmailId</b></small>
+    <!-- Phone Number -->
+    <mat-form-field class="name-input-field">
+      <mat-label>Phone Number: </mat-label>
+      <input matInput  formControlName="phoneNumber">
+    </mat-form-field>
+    <small class="invalid-message invalid-text" *ngIf="employeeForm.controls.phoneNumber.errors?.pattern"><b>Invalid phone Number</b></small>
+    <!-- Date Of Birth -->
+    <mat-form-field class="name-input-field">
+      <mat-label>Date Of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <!-- Gender -->
+    <mat-radio-group class="name-input-field" formControlName="gender">
+      <mat-label style="display: block;">Gender</mat-label>
+      <mat-radio-button value="Male">Male</mat-radio-button>
+      <mat-radio-button value="Female">Female</mat-radio-button>
+    </mat-radio-group>
+    <!-- Hobbies -->
+    <section class="hobies-section">
+      <mat-label class="hobbies-label">Hobies:</mat-label>
+      <mat-checkbox class="label-margin" formControlName="dancing">Dancing</mat-checkbox>
+      <mat-checkbox class="label-margin" formControlName="painting">Painting</mat-checkbox>
+    </section>
+    <button class="submit-button" (click)="submitData()">Submit</button>
+  </form>
+</div>
+
+
+<!-- Table Displaying the Data -->
+<div class="employee-table">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Email Column -->
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+  </ng-container>
+
+  <!-- phoneNumber Column -->
+  <ng-container matColumnDef="phoneNumber">
+    <th mat-header-cell *matHeaderCellDef> Phone Number </th>
+    <td mat-cell *matCellDef="let element"> {{element.phoneNumber}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</div>

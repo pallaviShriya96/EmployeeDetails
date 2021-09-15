@@ -1,0 +1,46 @@
+{
+  "employee": [
+    {
+      "name": "Pallavi",
+      "email": "",
+      "phoneNumber": "",
+      "dateOfBirth": "",
+      "gender": null,
+      "hobbies": [
+        "dancing"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Pallavi Shriya",
+      "email": "pallavi.shriya@yahoo.com",
+      "phoneNumber": "7003415278",
+      "dateOfBirth": "2021-09-14T18:30:00.000Z",
+      "gender": "Female",
+      "hobbies": [
+        "dancing"
+      ],
+      "id": 2
+    },
+    {
+      "name": "",
+      "email": "",
+      "phoneNumber": "",
+      "dateOfBirth": "",
+      "gender": null,
+      "hobbies": [],
+      "id": 3
+    },
+    {
+      "name": "Saurav Shaw",
+      "email": "shaw1saurav@gmail.com",
+      "phoneNumber": "8777820836",
+      "dateOfBirth": "2021-09-28T18:30:00.000Z",
+      "gender": "Male",
+      "hobbies": [
+        "dancing"
+      ],
+      "id": 4
+    }
+  ]
+}

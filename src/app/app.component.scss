@@ -1,0 +1,49 @@
+.name-input-field{
+    display: block;
+    width: 200px;
+    margin: 10px 20px 10px 20px;
+}
+.hobies-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+} 
+.label-margin {
+    margin: 0 10px;
+}
+.invalid-message {
+    color: red;
+    font-weight: normal;
+    font-size: 12px;
+}
+.invalid-text {
+    margin-left: 20px;
+}
+.hobbies-label{
+    display: block;
+    margin-left: 20px;
+}
+
+.submit-button{
+    margin-left: 20px;
+}
+
+.employee-form{
+    border: 2px solid grey;
+    border-radius: 10px;
+    width: 400px;
+    margin: 50px;
+    padding-bottom: 30px;
+}
+
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.employee-table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
